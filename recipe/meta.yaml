@@ -1,5 +1,5 @@
 {% set name = "mitmproxy_wireguard" %}
-{% set version = "0.1.15" %}
+{% set version = "0.1.20" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mitmproxy_wireguard-{{ version }}.tar.gz
-  sha256: f2283d5167fe939b83290804e7a3305613f8c715c39d8c82f08e1ae93f235b3c
+  sha256: 440edb39623110e1a5b8793a70afb3833f25dba05cf02b07b083848b31cb0523
 
 build:
   script:
@@ -17,8 +17,8 @@ build:
     - export PYO3_CROSS_PYTHON_VERSION=$PY_VER
     {% endif %}
     - {{ PYTHON }} -m pip install . -vv
-  number: 1
-  skip: True  # [py<37]
+  number: 0
+  skip: true  # [py<37]
 
 requirements:
   build:
