@@ -1,11 +1,11 @@
-About mitmproxy_wireguard
-=========================
+About mitmproxy_wireguard-feedstock
+===================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mitmproxy_wireguard-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.org/project/mitmproxy-wireguard/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mitmproxy_wireguard-feedstock/blob/main/LICENSE.txt)
 
 Summary: WireGuard interface for mitmproxy
 
