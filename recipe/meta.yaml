@@ -17,12 +17,13 @@ build:
     - export PYO3_CROSS_PYTHON_VERSION=$PY_VER
     {% endif %}
     - {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   skip: true  # [py<37]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('rust') }}
     - python
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
