@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mitmproxy_wireguard-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/mitmproxy_wireguard-{{ version }}.tar.gz
   sha256: b0f7b44ef9b0601307c122c5fe1ce57368c2fc9330097ec576984a0d640b4727
 
 build:
@@ -17,12 +17,13 @@ build:
     - export PYO3_CROSS_PYTHON_VERSION=$PY_VER
     {% endif %}
     - {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   skip: true  # [py<37]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('rust') }}
     - python
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
